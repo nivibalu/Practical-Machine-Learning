@@ -161,7 +161,7 @@ excludeColumns <- c(highlyCorrelated, classeIndex)
 corrplot(correlationMatrix, method="color", type="lower", order="hclust", tl.cex=0.70, tl.col="black", tl.srt = 45, diag = FALSE)
 ```
 
-![](project_files/figure-html/unnamed-chunk-10-1.png)
+![](unnamed-chunk-10-1.png)
 
 We see that there are some features that aree quite correlated with each other.
 We will have a model with these excluded. Also we'll try and reduce the features by running PCA on all and the excluded subset of the features
@@ -477,7 +477,7 @@ varImpPlot(rfMod.exclude, cex=0.7, pch=16, main='Variable Importance Plot: rfMod
 plot(rfMod.exclude, , cex=0.7, main='Error vs No. of trees plot')
 ```
 
-![](project_files/figure-html/unnamed-chunk-14-1.png)
+![](unnamed-chunk-14-1.png)
 
 ```r
 par(mfrow=c(1,1)) 
@@ -494,7 +494,7 @@ palette <- brewer.pal(length(classeLevels), "Set1")
 rfMod.mds <- MDSplot(rfMod.exclude, as.factor(classeLevels), k=2, pch=20, palette=palette)
 ```
 
-![](project_files/figure-html/unnamed-chunk-15-1.png)
+![](unnamed-chunk-15-1.png)
 
 ```r
 library(cluster)
@@ -512,7 +512,7 @@ legend("bottomleft", legend=unique(rfMod.pam$clustering), pch=seq(15,14+length(c
   legend("topleft", legend=classeLevels, pch = 16, col=palette, title = "Classification")
 ```
 
-![](project_files/figure-html/unnamed-chunk-15-2.png)
+![](unnamed-chunk-15-2.png)
 
 ```r
 proc.time() - start
