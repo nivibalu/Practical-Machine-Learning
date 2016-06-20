@@ -141,7 +141,7 @@ p2 <- ggplot(training.subSetTrain, aes(classe, magnet_arm_x)) +
 multiplot(p1,p2,cols=2)
 ```
 
-![](project_files/figure-html/unnamed-chunk-9-1.png)
+![](unnamed-chunk-9-1.png)
 
 Clearly there is no hard seperation of classes possible using only these 'highly' correlated features.
 Let's train some models to get closer to a way of predicting these classe's
